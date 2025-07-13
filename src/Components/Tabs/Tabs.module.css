@@ -1,0 +1,43 @@
+.Navigator {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.085);
+  display: flex;
+  gap: 0.1rem;
+}
+
+.Navigator button {
+  min-height: 46px;
+  padding: 12px;
+  border: 1px solid transparent;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto,
+    helvetica neue, Arial, noto sans, sans-serif, apple color emoji,
+    segoe ui emoji, segoe ui symbol, noto color emoji;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: white;
+  cursor: pointer;
+  color: #22527b;
+}
+.Navigator button:hover {
+  border-color: #dee2e6 #dee2e6 #f9f9f9;
+}
+.Navigator button span {
+  margin-left: 4px;
+  background-color: #777;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 10rem;
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+.active {
+  border-color: #dee2e6 #dee2e6 #f9f9f9 !important;
+  background-color: #f9f9f9 !important;
+}

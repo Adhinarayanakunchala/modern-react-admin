@@ -1,0 +1,124 @@
+.wrapper {
+    display: grid;
+    gap: 1rem;
+}
+.profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.initials {
+    border: 1px solid #ddd;
+    height: 90px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 0.5rem; */
+}
+.initials h4 {
+    padding: 5px;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto,
+        helvetica neue, Arial, noto sans, sans-serif, apple color emoji,
+        segoe ui emoji, segoe ui symbol, noto color emoji;
+    font-size: 2.9rem;
+    font-weight: 400;
+    text-align: center;
+
+    text-transform: uppercase;
+}
+.initials img {
+    width: 100%;
+    height: 100%;
+}
+.Contact {
+    padding: 0.5rem;
+    display: flex;
+    gap: 1.4rem;
+    border-right: 1px solid #ddd;
+}
+.card-data h4 {
+    margin-bottom: 0.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto,
+        helvetica neue, Arial, noto sans, sans-serif, apple color emoji,
+        segoe ui emoji, segoe ui symbol, noto color emoji;
+}
+.card-data {
+    display: grid;
+    align-items: start;
+    align-content: start;
+}
+.card-data p:nth-child(2) {
+    color: #016997;
+    margin-bottom: 0.2rem;
+}
+.card-data p:nth-child(2) span {
+    margin-bottom: 0.2rem;
+}
+.card-data p {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+.action-btn {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    justify-content: center;
+    margin-top: 0.4rem;
+    cursor: pointer;
+    padding: 0.3rem 0;
+    color: #fff;
+    background: #186bae !important;
+    font-size: 0.75rem;
+    border-radius: 0.25rem;
+    border: 1px solid transparent;
+}
+.internal {
+    padding: 0.5rem;
+    display: grid;
+    align-content: start;
+    gap: 0.3rem;
+}
+.internal > h3 {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+.internal div {
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+}
+.internal div h3,
+.internal p {
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto,
+        helvetica neue, Arial, noto sans, sans-serif, apple color emoji,
+        segoe ui emoji, segoe ui symbol, noto color emoji;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+}
+@media screen and (max-width: 900px) {
+    .profile {
+        grid-template-columns: 1fr;
+    }
+    .Contact {
+        border: none;
+    }
+    .internal div {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .Contact {
+        display: grid;
+    }
+    .internal div {
+        grid-template-columns: 0.5fr 0.5fr;
+    }
+}

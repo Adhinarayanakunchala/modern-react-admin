@@ -1,0 +1,43 @@
+import { Helmet } from "react-helmet";
+import { BiPlus } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
+import Layout from "Components/Layout/index";
+import CommonClasses from "Styles/Common.module.css";
+import Users from "./Users";
+
+function Tutor() {
+    const Navigate = useNavigate();
+    const AccessItems = JSON.parse(localStorage.getItem("AccessItems"));
+    const filteredItems = AccessItems.filter((item) => item.PageName === "Users")[0];
+
+    const handleAdd = () => {
+        if (filteredItems?.CanWrite === 1) {
+            Navigate("/users/add");
+        } else {
+            Navigate("/forbidden");
+        }
+    };
+    return (
+        <Layout Active={"Users"}>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Users</title>
+            </Helmet>
+            <div className={CommonClasses["Container"]}>
+                <div className={CommonClasses["control-btns"]}>
+                    <button
+                        className={CommonClasses["button"]}
+                        onClick={handleAdd}>
+                        <BiPlus size={20} /> Create New
+                    </button>
+                </div>
+                <div className={CommonClasses["wrapper"]}>
+                    <h3>Users</h3>
+                    <Users />
+                </div>
+            </div>
+        </Layout>
+    );
+}
+
+export default Tutor;
