@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { motion } from 'framer-motion'
 import { Bell, Sun, Moon, Laptop, LogOut, User, Settings } from 'lucide-react'
 import { useAuthStore } from '../store/auth'
